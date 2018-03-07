@@ -1,1 +1,12 @@
-<h1>Hello World !</h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	let url = "https://api.fortnitetracker.com/v1/profile/pc/" + window.location.search.substr(1);
+	$.ajax({
+		headers: {
+			TRN-Api-Key: "b6057555-e0af-497d-8473-6ccb86245389"
+		}
+		url: url,
+	}).done(function(data) {
+		$('h1').html(data)
+	});
+</script>
